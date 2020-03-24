@@ -1,0 +1,151 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumerate,enumitem}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{mathtools}
+\usepackage[cm]{fullpage}
+\usepackage[english,ukrainian]{babel}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+
+\usepackage{multirow}
+\usepackage{mathtools}
+\usepackage{upgreek}
+
+% Extra packages for the demo:
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{ragged2e}
+\usepackage{schemabloc}
+\usepackage{commath}
+\usepackage{physics}
+\usepackage{array}
+\usepackage{wrapfig}
+
+\newcolumntype{B}{>{\bfseries}l<}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\renewcommand{\d}{\dif}
+
+\parindent 0in
+
+\usepackage{multicol}
+\usepackage{setspace}
+\setenumerate{nosep, label=\bfseries\alph*.}
+\renewcommand{\theenumi}{\alph{enumi}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% ADJUST THESE VALUES %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\hw}{0}            %% ASSIGNMENT NUMBER %%%%%%%%
+\newcommand{\group}{ФБ,ФЕ}        %% GROUP NUMBER %%%%%%%%%%%%%
+\newcommand{\coursename}{Фізика}  %% COURSE NAME %%%%%%%%%%%%%%
+\newcommand{\term}{1 семестр}
+\newcommand{\theme}{Вступ}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtheorem{theorem}{Теорема}
+\newcounter{problems}
+
+\newenvironment{problem}[1][]
+{\begin{trivlist}\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries \thesection.\arabic{problems}.}]}
+{\addtocounter{problems}{1}
+\end{trivlist}}
+
+\titleformat{\section}
+{\color{WildStrawberry}\normalfont\Large\bfseries}
+{\color{WildStrawberry}Заняття \thesection \setcounter{problems}{1}}{1em}{}
+
+\usepackage{floatrow}
+\usepackage{subfigure}
+\usepackage{graphicx,wrapfig}
+\floatsetup[table]{capposition=top}
+\floatsetup[wrapfigure]{capposition=bottom}
+%\floatsetup[figure]{capposition=beside,%
+%                    capbesideposition={right,bottom},%
+%                    capbesidewidth=0.3\textwidth,%
+%                    capbesidesep=quad% разделитель между картинкой и подписью
+%}
+\usepackage{amsmath}
+
+\begin{document}
+\everymath{\displaystyle}
+
+\thispagestyle{empty}
+\pagestyle{empty}
+
+%\textbf{Групи \group}\hfill\textbf{\coursename, \term}\\ 
+
+\newcommand{\ans}{\textit{\textbf{Відповідь: }}}
+\newcommand{\nb}{\textit{\textbf{Вказівка. }}}
+
+\newcommand{\preambula}[4]{
+
+\begin{minipage}[h]{0.2\linewidth}
+	\vspace{-1.6cm}
+	\textbf{Дано:}
+	
+    #1
+    
+	\hrulefill
+	#2
+	\end{minipage}
+	\hspace{-0.3cm}
+	\vline
+	\hfill
+	\hspace{-0.6cm}
+	\begin{minipage}[h]{0.45\linewidth}
+	#3
+    \end{minipage}
+    \begin{minipage}[h]{0.22\linewidth}
+    %\vspace{-5ex}
+    \includegraphics[width=\linewidth]{#4}
+    %\hspace{4ex}
+    %\includegraphics[width=\linewidth]{image}
+    \label{ris}
+	\end{minipage}
+}
+
+\newcommand{\given}{}
+\newcommand{\question}{}
+\newcommand{\innertext}{}
+\newcommand{\imageone}{image}
+
+\newcommand{\genpreambula}{
+\preambula{\given}{\question}{\innertext}{\imageone}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% BEGIN PROBLEMS %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\tableofcontents
+%\newpage
+
+%\input{00-1.tex} 
+%\input{00-2.tex} 
+%\input{00-3.tex} 
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%\input{01.tex} % Е, потенціал. 12-19.02.19
+%%%%%%%%%%%%%%%%%%%%%%%
+%\input{02} % 26.02.19 
+\input{02-ans}
+%\input{03} % 05.03.19
+
+%\input{04-ir.tex} % 12.03.19
+%\input{05-ir.tex} % 19.03.19
+
+%\input{06.tex} %26.03.19 ємність. енергія
+%\input{07.tex} %02.04.19 струм - 
+%\input{08.tex} 
+
+%\input{09.tex}
+%\input{10.tex}
+%%%%%%%%%%%%%%%%%%%%%%%
+%\input{11.tex}
+%\input{12.tex}
+
+\end{document} 
